@@ -4,3 +4,4 @@ teste.php
 ldap_config_info.txt
 sqls/
 Core/Ldap.php.*
+config.php
