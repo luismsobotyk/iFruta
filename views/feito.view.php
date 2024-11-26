@@ -51,11 +51,27 @@
                 <h3 id="erro">Ops!</h3>
                 <p>Parece que o kit alimentação ja foi retirado hoje!</p>
                 <p>Hora do registro: <?=$data?>  </p>
+		<form method="POST" action="/sair">
+                    <button type="submit" class="sair"> Sair </button>
+                </form>
         </div>
+        <style>
+                .sair{
+                    background-color: #ce520a7b;
+                    text-align: right;
+                    border-style: none;
+                    padding: 5px 10px;
+                    border-radius:4px;
+                    color: #4a1e04;
+                    cursor: pointer;
+                }
+        </style>
+        </div>
+
         <?php endif; ?>
     </section>
 
-    <script src="/javascript/anime.js"></script>
+    <script src="/anime.js"></script>
    
 </body>
 </html>

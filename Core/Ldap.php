@@ -22,6 +22,10 @@ class Ldap {
     }
 
     public function pesquisaUsuario($user, $pass){
+	if (!isset($pass) || !isset($user)) {
+		return;
+	}
+
 	$this->ldapBind = ldap_bind($this->ldapConn, $this->config['ldapUser'], $this->config['ldapPassword']) or die("Incapaz de autenticar pelo servidor LDAP");
         
 

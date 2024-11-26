@@ -12,3 +12,9 @@ $router->post('/registrar', 'controllers/registrar.php')->only('auth');
 
 
 $router->get('/exit', 'controllers/exit.php');
+
+$router->post('/sair', 'controllers/exit.php');
+
+//Testes Luis
+$router->get('/qrcode-test', 'controllers/QRCodeController.php');
+$router->get('/retirar', 'controllers/RetiradaController.php');
