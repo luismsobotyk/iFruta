@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- Título da aba -->
     <title>iFruta | Receber kit</title>
 
@@ -38,7 +38,7 @@
           text-align:center;
 
         }
-        
+
 
       </style>
         <div class="teste-notif">
@@ -47,7 +47,7 @@
     <?php endif; ?>
 
     <section class="container">
-        <form method="POST" class="container receber" action="/registrar"> 
+        <form method="POST" class="container receber" action="/registrar">
             <input hidden value="<?= $matricula;?>" name="user" id="user">
             <button type="submit" id="botao_receber">RECEBER</button>
             <div id="atributos">

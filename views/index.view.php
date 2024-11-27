@@ -1,47 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Ifruta</title>
+  <!-- Icone da página -->
+  <link rel="shortcut icon" href="/imagens/logo ifruta verde.png" type="image/x-icon">
+  <link rel="stylesheet" href="/css/login.css"> <!-- Link para o arquivo CSS -->
+  <script src="/javascript/login.js" defer></script> <!-- Link para o arquivo JavaScript -->
+</head>
+<body>
 
-      <!-- Título da aba -->
-      <title>iFruta</title>
+  <div class="login-container">
+    <!-- Logo iFruta e ícone lado a lado -->
+    <div class="logo-ifruta">
+      <img src="imagens/logo ifruta verde.png" alt="logo-ifruta" class="logo">
+      <h2 class="title-ifruta">iFruta</h2>
+    </div>
 
-      <!-- Icone da página -->
-      <link rel="shortcut icon" href="/images/fruta.ico" type="image/x-icon">
- 
-        <!-- Import do css -->
-      <link rel="stylesheet" href="/css/login.css">
+    <!-- Título Login -->
+    <h2>Login</h2>
+     <!-- Parágrafo informativo -->
+     <p>Insira os dados de login iguais aos usados para acessar a rede no campus e <span>pressione em Confirmar</span></p>
 
-      <!-- Fontes -->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Formulário de login -->
+    <form id="loginForm" action="/auth" method="POST">
+      <input hidden value="<?= $matricula;?>" name="user" id="user">
 
-      <!-- import de icon para o botao float -->
-      <script src="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/js/font-awesome.min.js" crossorigin="anonymous"></script>
-   </head>
+      <!-- Campo de email -->
+      <label for="user">Login</label>
+      <input type="text" class="input-field" id="user" placeholder="Digite o seu Login" name="user" required>
 
-   <body>
-      <section class="container section">
-         <form class="box_form" action="/auth" method="POST">
-         <img id="logo_login" src="/images/logo_ifrs.png" alt="Logo do IFRS Campus Porto Alegre">
-         <p id="login_paragraph">Informe o usuário e a senha do Moodle</p>
-         <?php if (isset($errors['ldap'])) : ?>
-               <p class="mensagem_erro"> <?= $errors['ldap'] ?> </p>
-         <?php endif; ?>
-               <label for="user">Identificação do Usuário: </label>
-               <input type="text" name="user" id="user">
-               
-               <label for="senha">Senha: </label>
-               <input type="password" name="senha" id="senha">
-         
-            <button type="submit" id="login" value="login">ENTRAR</button>
+      <!-- Campo de senha -->
+      <label for="senha">Senha</label>
+      <input type="password" class="input-field" id="senha" placeholder="Digite sua senha" name="senha" required>
 
-         </form>
-      </section>
-      
-   </body>
+      <!-- Botão de login -->
+      <button type="submit" class="btn-login" id="login" value="login">Confirmar</button>
 
+      <!-- Links para recuperar senha ou cadastrar-se -->
+      <div class="links">
+        <a href="/esqueci-senha">Esqueceu a senha?</a>
+        <a href="/cadastro">Cadastrar-se</a>
+      </div>
+
+      <!-- Mensagem de erro ou sucesso -->
+      <div id="message" class="message"></div>
+    </form>
+
+    <!-- Logo do IFRS (na parte de baixo do login) -->
+    <div class="logo-ifrs">
+      <img src="imagens/Logo-IFRS-cores-sem-fundo-Horizontal.png" alt="logo-ifrs">
+    </div>
+  </div>
+
+</body>
 </html>
