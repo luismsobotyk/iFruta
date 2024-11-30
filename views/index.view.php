@@ -40,12 +40,16 @@
 
       <!-- Links para recuperar senha ou cadastrar-se -->
       <div class="links">
-        <a href="/esqueci-senha">Esqueceu a senha?</a>
-        <a href="/cadastro">Cadastrar-se</a>
+        <a href="https://senhas.poa.ifrs.edu.br/">Esqueceu a senha?</a>
+        <!--<a href="/cadastro">Cadastrar-se</a> Retirado sob orientação do Evandro-->
       </div>
 
       <!-- Mensagem de erro ou sucesso -->
-      <div id="message" class="message"></div>
+      <div id="message" class="message">
+        <?php if (isset($errors['ldap'])) : ?>
+            <p class="mensagem_erro"> <?= $errors['ldap'] ?> </p>
+        <?php endif; ?>
+      </div>
     </form>
 
     <!-- Logo do IFRS (na parte de baixo do login) -->

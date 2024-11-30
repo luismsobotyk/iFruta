@@ -1,0 +1,185 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Berkshire+Swash&family=Bokor&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=M+PLUS+1+Code:wght@100..700&family=Quando&family=Shrikhand&family=Spicy+Rice&family=Ultra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Berkshire+Swash&family=Bokor&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=M+PLUS+1+Code:wght@100..700&family=Quando&family=Shrikhand&family=Spicy+Rice&family=Ultra&display=swap');
+
+:root {
+    --green: #4ACC77; 
+    --gray-course: #DEDDDD;
+    --gray-darck: #514E4E;
+    --green-darck: #39A35E; 
+    --white: #fff; 
+
+
+}
+
+/* Estilo geral da página */
+body {
+    font-family: "Inter", serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--green-darck);
+    margin: 0;
+  }
+  
+  /* Container do formulário */
+  .login-container {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Logo iFruta e título */
+  .logo-ifruta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo-ifruta .logo {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+  }
+  
+  .title-ifruta {
+    color: var(--green); 
+    margin: 0;
+    font-size: 25px;
+    font-family: "M PLUS 1 Code", serif;
+  }
+  
+  /* Título do formulário */
+  h2 {
+    color: var(--gray-darck); 
+    margin-bottom: 20px;
+    font-family: "M PLUS 1 Code", serif;
+  }
+  
+  /* Estilo dos campos de entrada */
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--green);
+    border-radius: 40px;
+    font-size: 14px;
+  }
+  
+  /* Labels dos campos de entrada */
+  label {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: var(--gray-darck);
+    width: 100%;
+    text-align: left;
+  }
+  
+  /* Estilo do botão de login */
+  .btn-login {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--green-darck); 
+    color: white;
+    border: none;
+    border-radius: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  /* Efeito ao passar o mouse sobre o botão */
+  .btn-login:hover {
+    background-color: var(--green);
+  }
+  
+  /* Estilo para links */
+  .links {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 14px;
+    color: var(--green);
+  }
+  
+  .links a {
+    text-decoration: none;
+    color: var(--green-darck); /* Cor verde */
+  }
+  
+  .links a:hover {
+    color: var(--green);
+  }
+  
+  /* Logo do IFRS (na parte de baixo do login) */
+  .logo-ifrs {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .logo-ifrs img {
+    width: 150px;
+    height: auto;
+  }
+  
+  /* Parágrafo informativo */
+  p {
+    font-size: 14px;
+    color: #777;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  /* Mensagem de erro ou sucesso */
+.message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    display: none; /* Ocultar inicialmente */
+  }
+  
+  .message.success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+  
+  .message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  /* Responsividade para telas menores */
+  @media (max-width: 480px) {
+    .login-container {
+      padding: 20px;
+    }
+  
+    h2 {
+      font-size: 20px;
+    }
+  
+    .input-field {
+      font-size: 14px;
+    }
+  
+    .btn-login {
+      font-size: 14px;
+    }
+  
+    .logo-ifrs img {
+      width: 120px;
+    }
+  }
+  

@@ -47,7 +47,7 @@ if ($db->query('SELECT id_curso FROM CURSO WHERE id_curso = :curso;', ['curso' =
     $_SESSION['usuario'] = $db->query('SELECT * FROM ALUNOS WHERE matricula = :matricula;', ['matricula' => $autorizar['matricula']])->fetchOrFail(Response::FORBIDDEN);
     
     
-    header('location: /registro');
+    header('location: /menu');
 } else {
     $errors['retirada'] = 'O seu curso não parece ter permissão de retirada.';
 }

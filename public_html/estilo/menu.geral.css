@@ -1,0 +1,43 @@
+body {             
+    padding: 25px;         
+}
+
+.container {
+    background-color: #F1F7F3;
+    border-radius: 10px;
+    text-align: center;
+    width: 45%;
+    margin: 0 auto 20px;
+}
+
+.container .img-principal img {
+    width: 30%;
+    height: auto;
+}
+.container img {
+    width: 20%;
+    height: auto;
+    padding: 15px;
+}
+
+.container-footer {
+    text-align: center;
+    background-color: #F1F7F3;
+    margin: 0 auto;
+    width: 45%;
+    border-radius: 10px;
+    padding: 5px; 
+}
+
+button {
+    border: none;
+    background-color: #289455;
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin: 10px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+

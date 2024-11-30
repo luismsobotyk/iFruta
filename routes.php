@@ -12,9 +12,14 @@ $router->post('/registrar', 'controllers/registrar.php')->only('auth');
 
 
 $router->get('/exit', 'controllers/exit.php');
-
 $router->post('/sair', 'controllers/exit.php');
 
+// Novas Rotas
+$router->get('/menu', 'controllers/menuController.php')->only('auth');;
+$router->get('/retirarAlimento', 'controllers/retirarAlimentoController.php')->only('auth');
+$router->get('/retirarAlimento/retirar', 'controllers/retirarAlimentoController.php')->only('auth');
+$router->get('/qrcode', 'controllers/QRCodeController.php')->only('auth');
+
 //Testes Luis
-$router->get('/qrcode-test', 'controllers/QRCodeController.php');
-$router->get('/retirar', 'controllers/RetiradaController.php');
+
+$router->get('/retirar', 'controllers/RetiradaController.php')->only('auth');;

@@ -1,0 +1,72 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Garantir que o modal esteja acima de outros elementos */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out; 
+}
+
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.modal-content {
+    background-color: #4E935A; 
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+
+.modal-content img {
+    width: 60%;
+    position: relative;
+    top: -90px; 
+    margin-bottom: -70px; 
+}
+
+
+.modal-content p {
+    color: white;
+    font-family: Arial, sans-serif;
+    margin-top: 20px; 
+}
+
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+
+.modal-buttons button {
+    background-color: #427C4C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+.modal-buttons button:hover {
+    background-color: #3A6A41;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
