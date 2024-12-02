@@ -67,9 +67,22 @@ DROP TABLE IF EXISTS `ADMINISTRADOR`;
 CREATE TABLE `ADMINISTRADOR` (
   `id_admin` INT NOT NULL AUTO_INCREMENT, -- ID único para cada administrador
   `nome` VARCHAR(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL, -- Nome do administrador
-  `email` VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL UNIQUE, -- Email do administrador
   `senha` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL, -- Senha do administrador (hash)
-  `data_criacao` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, -- Data de criação do registro
   PRIMARY KEY (`id_admin`) -- Chave primária
 );
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+
+INSERT INTO `CURSO` (`id_curso`, `nome_curso`) VALUES
+('ADM', 'ADMINISTRAÇÃO'),
+('BIB', 'BIBLIOTECONOMIA'),
+('BIO', 'BIOTECNOLOGIA'),
+('CON', 'CONTABILIDADE'),
+('INM', 'INSTRUMENTO MUSICAL'),
+('MAB', 'MEIO AMBIENTE'),
+('PAN', 'PANIFICAÇÃO'),
+('QUI', 'QUÍMICA'),
+('RED', 'REDES DE COMPUTADORES'),
+('SEC', 'SECRETARIADO'),
+('SEG', 'SEGURANÇA DO TRABALHO'),
+('TIM', 'TRANSAÇÕES IMOBILIÁRIAS');
