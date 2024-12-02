@@ -21,14 +21,7 @@ if (isset($_POST['senha'])){
 
 
 if(!isset($autorizar)){
-#    $errors['ldap'] = 'Usuário ou senha incorretos..';
-    $autorizar = [
-        'matricula' => $_POST['user'],
-        'curso' => "POA",
-        'nome' => "Teste MostraPoa",
-        'login' => "11122233344"
-        ];
-        
+    $errors['ldap'] = 'Usuário ou senha incorretos..';
 }
 
 
