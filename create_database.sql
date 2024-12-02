@@ -58,3 +58,18 @@ CREATE TABLE `REGISTROS` (
   CONSTRAINT `REGISTROS_FK` FOREIGN KEY (`matricula_aluno`) REFERENCES `ALUNOS` (`matricula`)
 );
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+-- Table structure for table `ADMINISTRADOR`
+
+DROP TABLE IF EXISTS `ADMINISTRADOR`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `ADMINISTRADOR` (
+  `id_admin` INT NOT NULL AUTO_INCREMENT, -- ID único para cada administrador
+  `nome` VARCHAR(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL, -- Nome do administrador
+  `email` VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL UNIQUE, -- Email do administrador
+  `senha` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL, -- Senha do administrador (hash)
+  `data_criacao` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP, -- Data de criação do registro
+  PRIMARY KEY (`id_admin`) -- Chave primária
+);
+/*!40101 SET character_set_client = @saved_cs_client */;
