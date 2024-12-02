@@ -112,6 +112,24 @@ body {
     font-size: 15px;
     letter-spacing: 10px;
     color: #005c29;
-   
+
 }
 
+/* Estilo para centralizar e sobrepor a animação */
+#wrapper-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escurecido com 50% de opacidade */
+    display: none; /* Oculto por padrão */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Sobrepõe os elementos da página */
+}
+
+/* Estilo para a animação */
+.wrapper {
+    text-align: center;
+}

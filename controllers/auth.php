@@ -39,7 +39,8 @@ if(!isset($autorizar)){
 if ($db->query('SELECT id_curso FROM CURSO WHERE id_curso = :curso;', ['curso' => $autorizar['curso']])->fetch()) {
     $curr_user = $db->query('SELECT matricula FROM ALUNOS WHERE matricula = :matricula;', ['matricula' => $autorizar['matricula']])->fetch();
     
-    if(!$curr_user){ 
+    if(!$curr_user){
+        error_log('Valores de $autorizar: ' . json_encode($autorizar));
         auth(empty($db->query('INSERT INTO ALUNOS (matricula, id_curso, nome, login) VALUES(:matricula, :id_curso, :nome, :login);',
         ['matricula' => $autorizar['matricula'], 'id_curso' => $autorizar['curso'], 'nome' => $autorizar['nome'] , 'login' => $autorizar['login']])->fetch()),
         Response::NOT_FOUND); // trocar erro
