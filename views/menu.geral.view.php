@@ -65,7 +65,7 @@
 
 <div class="container-footer">
     <button type="button" id="btn-tutorial">Tutorial</button>
-    <button type="button">Sair</button>
+    <a href="/exit"><button type="button">Sair</button></a>
 </div>
 
 <div class="modal-overlay" id="tutorial-modal">

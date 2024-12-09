@@ -20,6 +20,7 @@ $router->get('/retirarAlimento', 'controllers/retirarAlimentoController.php')->o
 $router->get('/retirarAlimento/retirar', 'controllers/retirarAlimentoController.php')->only('auth');
 $router->get('/qrcode', 'controllers/QRCodeController.php')->only('auth');
 
-//Testes Luis
-
-$router->get('/retirar', 'controllers/RetiradaController.php')->only('auth');;
+//Rotas para verificação da leitura
+$router->get('/testeRead', 'controllers/Reader.php');
+$router->get('/discenteLeitura', 'controllers/discenteLeituraController.php');
+$router->get('/registraRetirada', 'controllers/registraRetiradaController.php');

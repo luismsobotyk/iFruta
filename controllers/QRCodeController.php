@@ -16,7 +16,7 @@ $builder = new Builder(
     writer: new PngWriter(),
     writerOptions: [],
     validateResult: false,
-    data: $url,
+    data: $data,
     encoding: new Encoding('UTF-8'),
     errorCorrectionLevel: ErrorCorrectionLevel::High,
     size: 300,
