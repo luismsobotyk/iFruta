@@ -35,11 +35,20 @@
 
     Instascan.Camera.getCameras().then(cameras => {
         if (cameras.length > 0) {
-            scanner.start(cameras[0]);
+            // Tenta encontrar uma câmera traseira
+            let backCamera = cameras.find(camera => camera.name.toLowerCase().includes('back'));
+
+            if (backCamera) {
+                scanner.start(backCamera); // Inicia com a câmera traseira
+            } else {
+                scanner.start(cameras[0]); // Caso não encontre, usa a primeira câmera
+                console.warn('Câmera traseira não encontrada, usando a primeira câmera disponível.');
+            }
         } else {
             console.error("Não existe câmera no dispositivo!");
         }
     });
+
 
     function hexToAscii(hex) {
         let ascii = '';
